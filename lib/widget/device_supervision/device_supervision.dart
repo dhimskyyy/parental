@@ -110,7 +110,7 @@ class _DeviceSupervisionState extends State<DeviceSupervision> {
       leading: Icon(icon, size: 26, color: Colors.black),
       title: Text(
         title,
-        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
       ),
       trailing: trailing ??
           const Icon(Icons.arrow_forward_ios_rounded,

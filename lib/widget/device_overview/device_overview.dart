@@ -55,7 +55,7 @@ class DeviceOverview extends StatelessWidget {
                   'Notifications',
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontSize: 16,
+                    fontSize: 15,
                     color: Colors.black,
                   ),
                 ),
@@ -78,7 +78,7 @@ class DeviceOverview extends StatelessWidget {
                   'Applications',
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontSize: 16,
+                    fontSize: 15,
                     color: Colors.black,
                   ),
                 ),
