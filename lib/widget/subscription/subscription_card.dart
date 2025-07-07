@@ -35,14 +35,12 @@ class SubscriptionCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-
           const Divider(
             color: Color.fromARGB(129, 255, 255, 255),
             height: 1,
             thickness: 0.2,
           ),
           const SizedBox(height: 10),
-
           const Text(
             'Time left: 3 days',
             style: TextStyle(color: Color.fromARGB(255, 230, 222, 197), fontSize: 14),

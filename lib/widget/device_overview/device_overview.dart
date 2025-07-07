@@ -8,7 +8,6 @@ class DeviceOverview extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Label "Device Overview" dengan indikator biru kecil
         Padding(
           padding: const EdgeInsets.only(left: 20, top: 20, bottom: 10),
           child: Row(

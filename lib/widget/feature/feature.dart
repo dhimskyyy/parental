@@ -32,12 +32,12 @@ class FeatureCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween, // ⬅️ biar gambar turun ke bawah
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min, // ⬅️ agar tidak terlalu tinggi
+          mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 5, left: 5), // atur sesuai kebutuhan
+              padding: const EdgeInsets.only(top: 5, left: 5),
               child: Text(
                 title,
                 style: const TextStyle(
@@ -51,12 +51,12 @@ class FeatureCard extends StatelessWidget {
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center, // sejajarkan tengah vertikal
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(imagePath, height: imageSize),
                 Container(
                   width: 24,
-                  height: 24, // disamakan dengan gambar biar rata tengah
+                  height: 24,
                   decoration: BoxDecoration(
                     color: iconColor,
                     shape: BoxShape.circle,

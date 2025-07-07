@@ -1,7 +1,76 @@
 import 'package:flutter/material.dart';
+import '../widget/subscription/subscription_page.dart';
 
 class DeviceCard extends StatelessWidget {
   const DeviceCard({super.key});
+
+  void _showLimitDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (_) => Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text(
+                'Cannot Add More Devices',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 16),
+              const Text(
+                'Sorry, you cannot add more devices since the number of your bound devices has reached the limits.\n\nYou can subscribe AirDroid Parental Control to bind more devices.',
+                style: TextStyle(fontSize: 14),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 24),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pop(); // Tutup dialog
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const SubscriptionPage()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF3B66F5),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                  ),
+                  child: const Text(
+                    'Subscription',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop(); // Tutup dialog
+                },
+                child: const Text(
+                  'Cancel',
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +84,11 @@ class DeviceCard extends StatelessWidget {
             shape: BoxShape.circle,
             color: Colors.white,
           ),
-          child: Center(
-            child: Image.asset('assets/images/avatar.png', height: 28),
+          child: ClipOval(
+            child: Image.asset(
+              'assets/images/people.png',
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         const SizedBox(width: 10),
@@ -59,8 +131,11 @@ class DeviceCard extends StatelessWidget {
 
         // Icon Chat & Add
         const Icon(Icons.chat_bubble_outline, color: Colors.white),
-        SizedBox(width: 15),
-        const Icon(Icons.add_circle_outline, color: Colors.white),
+        const SizedBox(width: 15),
+        GestureDetector(
+          onTap: () => _showLimitDialog(context),
+          child: const Icon(Icons.add_circle_outline, color: Colors.white),
+        ),
       ],
     );
   }

@@ -18,7 +18,7 @@ class _BottomNavState extends State<BottomNav> {
     DevicePage(),
     LocationMainPage(),
     FamilyPage(),
-    MyMainPage(),
+    MyPage(),
   ];
 
   @override

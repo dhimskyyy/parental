@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import '../widget/device_card.dart';
-import '../widget/subscription_card.dart';
-import '../widget/todays_event_card.dart';
-import '../features/remote_camera.dart';
-import '../features/screen_mirroring.dart';
-import '../features/one_way_audio.dart';
-import '../widget/feature_card.dart';
+import '../widget/todays_event/todays_event_card.dart';
+import '../widget/feature/remote_camera.dart';
+import '../widget/feature/screen_mirroring.dart';
+import '../widget/feature/one_way_audio.dart';
+import '../widget/feature/feature.dart';
 import '../widget/device_overview/device_overview.dart';
 import '../widget/device_supervision/device_supervision.dart';
 import '../widget/on_childs_device/on_childs_device.dart';
+import '../widget/subscription/subscription_card.dart';
 
 class DevicePage extends StatelessWidget {
   const DevicePage({super.key});

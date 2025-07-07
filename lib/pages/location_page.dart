@@ -22,7 +22,6 @@ class _LocationMainPageState extends State<LocationMainPage> {
     return Scaffold(
       body: Stack(
         children: [
-          /// Google Maps
           GoogleMap(
             onMapCreated: _onMapCreated,
             initialCameraPosition: CameraPosition(
@@ -40,27 +39,25 @@ class _LocationMainPageState extends State<LocationMainPage> {
             },
           ),
 
-          /// Tombol Route History & Geofence
           Positioned(
             top: 60,
             right: 16,
-            child: Column(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _topButton('Route History'),
-                const SizedBox(height: 12),
+                const SizedBox(width: 12),
                 _topButton('Geofence'),
               ],
             ),
           ),
 
-          /// Tombol Show my location
           Positioned(
-            bottom: 180,
+            bottom: 160,
             right: 16,
             child: _floatingAction('Show my location', Icons.my_location),
           ),
 
-          /// Info perangkat di bawah
           Positioned(
             bottom: 0,
             left: 0,
@@ -81,33 +78,47 @@ class _LocationMainPageState extends State<LocationMainPage> {
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
                       CircleAvatar(
-                        backgroundColor: const Color(0xFFE8F0FE),
-                        child: Image.asset('assets/images/avatar.png', width: 30),
+                        backgroundColor: Colors.white,
+                        radius: 20,
+                        child: Image.asset('assets/images/people.png', width: 32),
                       ),
                       const SizedBox(width: 12),
-                      const Expanded(
+                      Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Samsung SM-A155F', style: TextStyle(fontWeight: FontWeight.w600)),
+                          children: const [
+                            Text(
+                              'Samsung SM-A155F',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            ),
                             SizedBox(height: 4),
-                            Text('Last updated: 15.29', style: TextStyle(fontSize: 12, color: Colors.grey)),
+                            Row(
+                              children: [
+                                Icon(Icons.access_time, size: 14, color: Colors.grey),
+                                SizedBox(width: 4),
+                                Text(
+                                  'Last updated: 15.29',
+                                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                                ),
+                              ],
+                            )
                           ],
                         ),
                       ),
-                      const Icon(Icons.refresh, size: 20),
+                      Icon(Icons.refresh, size: 20),
                       const SizedBox(width: 12),
                       Icon(Icons.send, size: 20),
                     ],
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
                   const Text(
                     'Gg. 3A No.17, Banjiran, Kec. Warungasem,\nKabupaten Batang, Jawa Tengah 51252, Indonesia',
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.left,
                     style: TextStyle(fontSize: 13),
                   ),
                 ],
@@ -125,7 +136,7 @@ class _LocationMainPageState extends State<LocationMainPage> {
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.black,
         backgroundColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
         elevation: 2,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       ),
@@ -141,7 +152,7 @@ class _LocationMainPageState extends State<LocationMainPage> {
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.black,
         backgroundColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
         elevation: 2,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
       ),
