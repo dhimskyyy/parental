@@ -24,7 +24,7 @@ class RemoteCamera extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/icons/loading_icon.png', height: 120), // ganti dengan gambar sesuai
+            Image.asset('assets/icons/loading_icon.png', height: 120),
             const SizedBox(height: 20),
             const Text(
               'Connecting to the device...',
