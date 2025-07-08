@@ -26,7 +26,7 @@ class FeatureCard extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: 117,
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6), // vertikal dikurangi
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
         decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: BorderRadius.circular(20),
@@ -48,10 +48,8 @@ class FeatureCard extends StatelessWidget {
               ),
             ),
             SizedBox(height: textBottomGap),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(imagePath, height: imageSize),
                 Container(
@@ -61,12 +59,10 @@ class FeatureCard extends StatelessWidget {
                     color: iconColor,
                     shape: BoxShape.circle,
                   ),
-                  child: const Center(
-                    child: Icon(
-                      Icons.arrow_forward_ios,
-                      size: 12,
-                      color: Colors.white,
-                    ),
+                  child: const Icon(
+                    Icons.arrow_forward_ios,
+                    size: 12,
+                    color: Colors.white,
                   ),
                 ),
               ],

@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import '../widget/device_card.dart';
+import '../widget/section/device_page/device_header_section.dart';
+import '../widget/section/device_page/feature_section.dart';
 import '../widget/todays_event/todays_event_card.dart';
-import '../widget/feature/remote_camera.dart';
-import '../widget/feature/screen_mirroring.dart';
-import '../widget/feature/one_way_audio.dart';
-import '../widget/feature/feature.dart';
 import '../widget/device_overview/device_overview.dart';
 import '../widget/device_supervision/device_supervision.dart';
 import '../widget/on_childs_device/on_childs_device.dart';
-import '../widget/subscription/subscription_card.dart';
 
 class DevicePage extends StatelessWidget {
   const DevicePage({super.key});
@@ -20,31 +16,7 @@ class DevicePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Header
-            Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF3B66F5), Color(0xFF5B84F7)],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
-                ),
-              ),
-              padding: const EdgeInsets.only(top: 20, left: 20, right: 20, bottom: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  SizedBox(height: 16),
-                  DeviceCard(),
-                  SizedBox(height: 24),
-                  SubscriptionCard(),
-                ],
-              ),
-            ),
-
+            const DeviceHeaderSection(),
             TodaysEventCard(),
             const SizedBox(height: 24),
 
@@ -53,36 +25,7 @@ class DevicePage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  FeatureCard(
-                    title: 'Remote\nCamera',
-                    imagePath: 'assets/icons/remote_camera.png',
-                    backgroundColor: Color(0xFFD7E6FD),
-                    iconColor: Color(0xFF3A75F7),
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (_) => const RemoteCamera()));
-                    },
-                    textBottomGap: 10,
-                  ),
-                  FeatureCard(
-                    title: 'Screen\nMirroring',
-                    imagePath: 'assets/icons/screen_mirroring.png',
-                    backgroundColor: Color(0xFFFFF0D7),
-                    iconColor: Color(0xFFFF9900),
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (_) => const ScreenMirroring()));
-                    },
-                    textBottomGap: 12,
-                  ),
-                  FeatureCard(
-                    title: 'One-Way\nAudio',
-                    imagePath: 'assets/icons/one_way_audio.png',
-                    backgroundColor: Color(0xFFDAF3EC),
-                    iconColor: Color(0xFF23BF73),
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (_) => const OneWayAudio()));
-                    },
-                    textBottomGap: 8,
-                  ),
+                  const FeatureSection(),
                 ],
               ),
             ),
