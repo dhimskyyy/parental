@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:parental/pages/device_page.dart';
-import 'package:parental/pages/family_page.dart';
-import 'package:parental/pages/location_page.dart';
-import 'package:parental/pages/my_page.dart';
+import 'package:parental/view/device_page.dart';
+import 'package:parental/view/family_page.dart';
+import 'package:parental/view/location_page.dart';
+import 'package:parental/view/my_page.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
