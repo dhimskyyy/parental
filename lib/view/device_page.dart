@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../widget/section/device_page/device_header_section.dart';
-import '../widget/section/device_page/feature_section.dart';
-import '../widget/todays_event/todays_event_card.dart';
-import '../widget/device_overview/device_overview.dart';
-import '../widget/device_supervision/device_supervision.dart';
-import '../widget/on_childs_device/on_childs_device.dart';
+import '../widget/dahsboard_card/header_section/section/device_header_section.dart';
+import '../widget/dahsboard_card/header_section/section/feature_section.dart';
+import '../widget/dahsboard_card/te_section/todays_event_card.dart';
+import '../widget/dahsboard_card/do_section/device_overview.dart';
+import '../widget/dahsboard_card/ds_section/device_supervision.dart';
+import '../widget/dahsboard_card/ocd_section/on_childs_device.dart';
 
 class DevicePage extends StatelessWidget {
   const DevicePage({super.key});

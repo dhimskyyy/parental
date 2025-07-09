@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../dahsboard_card/widget/feature_card.dart';
-import '../../dahsboard_card/screen/remote_camera.dart';
-import '../../dahsboard_card/screen/screen_mirroring.dart';
-import '../../dahsboard_card/screen/one_way_audio.dart';
+import '../../feature_section/widget/feature_card.dart';
+import '../../feature_section/screen/remote_camera.dart';
+import '../../feature_section/screen/screen_mirroring.dart';
+import '../../feature_section/screen/one_way_audio.dart';
 
 class FeatureSection extends StatelessWidget {
   const FeatureSection({super.key});

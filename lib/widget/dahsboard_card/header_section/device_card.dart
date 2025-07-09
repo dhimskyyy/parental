@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'avatar_image.dart';
 import 'device_info.dart';
 import 'popup_subscription.dart';
-import '../subscription/subscription_page.dart';
+import '../header_section/subscription/subscription_page.dart';
 
 class DeviceCard extends StatelessWidget {
   const DeviceCard({super.key});

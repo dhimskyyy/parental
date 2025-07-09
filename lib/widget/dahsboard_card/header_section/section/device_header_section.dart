@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../device_card/device_card.dart';
-import '../../subscription/subscription_card.dart';
+import '../device_card.dart';
+import '../subscription/subscription_card.dart';
 
 class DeviceHeaderSection extends StatelessWidget {
   const DeviceHeaderSection({super.key});
