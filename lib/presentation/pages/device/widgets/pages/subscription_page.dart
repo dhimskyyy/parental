@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'subscription_card.dart';
+import '../device_header_section.dart';
 
 class SubscriptionPage extends StatelessWidget {
   const SubscriptionPage({super.key});
