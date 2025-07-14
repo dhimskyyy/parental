@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './pages/notifications_pages.dart';
+import './pages/applications_pages.dart';
 
 class DeviceOverview extends StatelessWidget {
   const DeviceOverview({super.key});
@@ -43,8 +45,10 @@ class DeviceOverview extends StatelessWidget {
           child: Column(
             children: [
               ListTile(
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 0,
+                ),
                 leading: const Icon(
                   Icons.notifications_none_rounded,
                   size: 28,
@@ -63,11 +67,20 @@ class DeviceOverview extends StatelessWidget {
                   size: 14,
                   color: Color(0xFF9E9E9E),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const NotificationsPage(),
+                    ),
+                  );
+                },
               ),
               ListTile(
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 0,
+                ),
                 leading: const Icon(
                   Icons.grid_view_rounded,
                   size: 28,
@@ -86,7 +99,14 @@ class DeviceOverview extends StatelessWidget {
                   size: 14,
                   color: Color(0xFF9E9E9E),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ApplicationsPage(),
+                    ),
+                  );
+                },
               ),
             ],
           ),

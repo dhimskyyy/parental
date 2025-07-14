@@ -3,7 +3,6 @@ import 'core/theme/app_theme.dart';
 import './presentation/navigation/bottomnav.dart';
 
 void main() {
-  // Jika nanti pakai dependency injection, bisa panggil setup di sini
   runApp(const MyApp());
 }
 

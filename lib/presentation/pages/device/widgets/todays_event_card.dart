@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/todays_event_detail_screen.dart';
 
 class TodaysEventCard extends StatelessWidget {
   const TodaysEventCard({super.key});
@@ -25,18 +26,25 @@ class TodaysEventCard extends StatelessWidget {
           // Header
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Text(
+            children: [
+              const Text(
                 "Today's Event",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Icon(Icons.arrow_forward_ios, size: 16),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const TodaysEventDetailScreen()),
+                  );
+                },
+                child: const Icon(Icons.arrow_forward_ios, size: 16),
+              ),
             ],
           ),
-          const SizedBox(height: 12),
 
           // Label Usage Time
           const Text(
@@ -79,7 +87,7 @@ class TodaysEventCard extends StatelessWidget {
 
           // Logo + text
           Row(
-            crossAxisAlignment: CrossAxisAlignment.end, // ⬅️ penting agar semua anak sejajar bawah
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +111,7 @@ class TodaysEventCard extends StatelessWidget {
               const Spacer(),
               Container(
                 alignment: Alignment.bottomRight,
-                height: 70, // ⬅️ kunci batas tinggi agar tidak terlalu tinggi
+                height: 70,
                 width: 190,
                 child: Image.asset(
                   'assets/images/usage_illustration.png',
@@ -112,7 +120,6 @@ class TodaysEventCard extends StatelessWidget {
               ),
             ],
           ),
-
         ],
       ),
     );
