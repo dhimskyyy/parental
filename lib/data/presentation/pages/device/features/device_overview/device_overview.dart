@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './pages/notifications_pages.dart';
-import './pages/applications_pages.dart';
+import 'notifications_pages.dart';
+import 'applications_pages.dart';
 
 class DeviceOverview extends StatelessWidget {
   const DeviceOverview({super.key});

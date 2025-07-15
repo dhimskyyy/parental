@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'data/feature_card.dart';
-import 'data/dashboard_feature_item.dart';
+import 'feature_card.dart';
+import 'feature_item.dart';
 
 class FeatureSection extends StatelessWidget {
   const FeatureSection({super.key});

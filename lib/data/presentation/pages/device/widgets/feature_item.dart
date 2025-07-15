@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../screen/remote_camera.dart';
-import '../screen/screen_mirroring.dart';
-import '../screen/one_way_audio.dart';
+import '../features/remote_camera/detail_remote_camera.dart';
+import '../features/screen_mirroring/detail_screen_mirroring.dart';
+import '../features/one-way_audio/detail_one_way_audio.dart';
 
 class DashboardFeatureItem {
   final String title;

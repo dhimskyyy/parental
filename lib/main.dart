@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
-import './presentation/navigation/bottomnav.dart';
+import './data/presentation/navigation/bottomnav.dart';
 
 void main() {
   runApp(const MyApp());

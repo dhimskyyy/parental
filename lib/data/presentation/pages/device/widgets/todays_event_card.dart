@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/todays_event_detail_screen.dart';
+import '../features/todays_event/detail_todays_event_screen.dart';
 
 class TodaysEventCard extends StatelessWidget {
   const TodaysEventCard({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './pages/subscription_page.dart';
+import './subscription_card.dart';
 
 class DeviceHeaderSection extends StatelessWidget {
   const DeviceHeaderSection({super.key});

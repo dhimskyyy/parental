@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parental/presentation/pages/device/device_page.dart';
+import '../pages/device/device_page.dart';
 import 'package:parental/view/family_page.dart';
 import 'package:parental/view/location_page.dart';
 import 'package:parental/view/my_page.dart';
