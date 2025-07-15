@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'app_colors.dart';
+import 'app_text_styles.dart';
 
 class AppTheme {
   static final ThemeData lightTheme = ThemeData(
@@ -7,9 +9,14 @@ class AppTheme {
     highlightColor: Colors.transparent,
     splashColor: Colors.transparent,
 
+    primaryColor: AppColors.primary,
+    scaffoldBackgroundColor: Colors.white,
+
+    textTheme: AppTextStyles.textTheme,
+
     switchTheme: SwitchThemeData(
-      thumbColor: MaterialStateProperty.resolveWith((states) => Colors.white),
-      trackColor: MaterialStateProperty.resolveWith((states) => const Color(0xFFE0E0E0)),
+      thumbColor: MaterialStateProperty.all(Colors.white),
+      trackColor: MaterialStateProperty.all(AppColors.greyLight),
       overlayColor: MaterialStateProperty.all(Colors.transparent),
       trackOutlineColor: MaterialStateProperty.all(Colors.transparent),
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,

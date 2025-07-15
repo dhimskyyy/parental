@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import '../pages/device/device_page.dart';
-import 'package:parental/view/family_page.dart';
-import 'package:parental/view/location_page.dart';
-import 'package:parental/view/my_page.dart';
+import 'package:parental/core/theme/app_colors.dart';
+import 'package:parental/core/theme/app_text_styles.dart';
+import 'package:parental/data/presentation/pages/device/device_page.dart';
+import 'package:parental/data/presentation/pages/location/location_page.dart';
+import 'package:parental/data/presentation/pages/family/family_page.dart';
+import 'package:parental/data/presentation/pages/my/my_page.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -32,19 +34,19 @@ class _BottomNavState extends State<BottomNav> {
   Widget _buildBottomNavBar() {
     return Container(
       decoration: const BoxDecoration(
-        border: Border(top: BorderSide(color: Color(0xFFE0E0E0))),
+        border: Border(top: BorderSide(color: AppColors.greyLight)),
       ),
       child: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) => setState(() => _currentIndex = index),
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
-        selectedItemColor: const Color(0xFF3B66F5),
-        unselectedItemColor: const Color(0xFF9E9E9E),
+        selectedItemColor: AppColors.primary,
+        unselectedItemColor: AppColors.textSecondary,
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        selectedLabelStyle: const TextStyle(fontSize: 11, fontWeight: FontWeight.w500),
-        unselectedLabelStyle: const TextStyle(fontSize: 11, fontWeight: FontWeight.w400),
+        selectedLabelStyle: AppTextStyles.navSelected,
+        unselectedLabelStyle: AppTextStyles.navUnselected,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.devices), label: 'Device'),
           BottomNavigationBarItem(icon: Icon(Icons.location_on_outlined), label: 'Location'),
